@@ -12,7 +12,7 @@
 *.csproj
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-*.png
+*.jpg
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
