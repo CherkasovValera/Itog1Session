@@ -1,19 +1,29 @@
-﻿
+﻿// Задача: Написать программу, которая из имеющегося массива строк формирует новый массив из строк, 
+// длина которых меньше, либо равна 3 символам. Первоначальный массив можно ввести с клавиатуры, 
+// либо задать на старте выполнения алгоритма. 
+// При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
-string message = "hel";
- Console.Write($"'{message}'");
-string message1 = "hello";
-Console.Write($"'{message1}'");
-string message2 = "h";
-Console.Write($"'{message2}'");
-// получаем символ
-//char firstChar = message[1]; // символ 'e'
-//Console.WriteLine(firstChar);   //e
-if (message.Length <= 3|| message1.Length<=3||message2.Length<=3)
+
+Console.Clear();
+string[] CreateArray; string[] NewArray;
+
+CreateArray = new string[] { "Hallo", "Bay", "Salut", ":-)", "Ups", "Ura", "Amba" };
+NewArray = new string[7];
+
+for (int i = 0; i < CreateArray.Length; i++)
 {
-//message.Length <= 3;
-
-Console.WriteLine();
-    Console.WriteLine($"{message.Length <= 3},{message1.Length<=3},{message2.Length<=3} ");  // длина строки  
-  
+    Console.Write(CreateArray[i] + "\t ");
 }
+Console.WriteLine();
+int k = 0;
+for (int i = 0; i < CreateArray.Length; i++)
+{
+    if (CreateArray[i].Length <= 3)
+    {
+        NewArray[k] = CreateArray[i];
+    }
+    Console.Write(NewArray[k] + " ");
+    k++;
+}
+
+
